@@ -1,0 +1,147 @@
+/*{
+position: static !important;
+}*/
+body{
+    overflow-x:hidden;
+}
+
+
+.text-justify
+{
+    text-align:justify ;
+}
+.underline-footer
+{
+    width:70px;
+    height:2px;
+    background-color:#ff5e14;
+    border-radius: 2px;
+    margin-top:10px;
+}
+footer-link li a :hover
+{
+color: black !important;
+text-decoration:underline;
+}
+.home-footer
+{
+    width:70px;
+    height:2px;
+    background-color:#ff5e14;
+    border-radius:2px;
+    margin-top:10px;
+}
+#contact
+{
+ height: 650px;
+ background-image: url('../images/college7.jpg');
+ background-size: cover;
+}
+#contact .col-sm-12
+{
+display: flex;
+align-items: top;
+justify-content: top;
+color: black;
+font-size:larger;
+backdrop-filter:blur(3px);
+}
+#login
+{
+ height:1000px;
+ width:100%;
+ background-size:cover;
+ background-image:url('../images/edu.jpg')   
+}
+#login .col-sm-4
+{
+display: flex;
+align-items:center;
+justify-content:center;
+color:rgb(70, 70, 102);
+font-size:larger;
+backdrop-filter:blur(30px);
+}
+#block
+{
+ min-height:580px;
+ width:100%;
+ background-color:white;  
+ border-radius:50px; 
+max-width:900px;
+margin:auto;
+}
+
+#card
+{
+height:200px;
+width:100%;
+}
+
+#card1
+{
+    width:330px;
+    height: 200px;;
+    background-color: #df8b1e;
+}
+#card2
+{
+    width:330px;
+    height: 200px;;
+    background-color: #1c507a;
+}
+#card3
+{
+    width:330px;
+    height: 200px;;
+    background-color: #e09d0d;
+}
+#card4
+{
+    width:330px;
+    height: 200px;;
+    background-color: #1c507a;
+}
+#about
+{
+min-height:700px;
+ width:100%;
+ background-size:cover;
+ background-image:url('../images/news/college5.jpg')   
+}
+#about .col-sm-12
+{
+    display:flex;
+    align-items: right;
+    color:white;
+    backdrop-filter :blur (30px);
+    text-align: center;
+}
+#register
+{
+ min-height:900px;
+ width:100%px;
+ background-size:cover;
+ background-image:url('../images/college5.jpg')   
+}
+
+.card{
+width:100%;
+
+
+}
+.news-card:hover img
+{
+
+transform :scale(1.2);
+}
+.news-card div
+{
+ overflow: hidden;
+ border-radius: 5px 5px 0 0;
+ 
+}
+.news-card div img
+{
+    transition:.5s ease;
+}
