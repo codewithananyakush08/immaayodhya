@@ -1,147 +1,174 @@
-/*{
-position: static !important;
-}*/
-body{
-    overflow-x:hidden;
-}
+body{ overflow-x:hidden; }
 
+.text-justify{ text-align:justify; }
 
-.text-justify
-{
-    text-align:justify ;
-}
-.underline-footer
-{
-    width:70px;
-    height:2px;
-    background-color:#ff5e14;
-    border-radius: 2px;
-    margin-top:10px;
-}
-footer-link li a :hover
-{
-color: black !important;
-text-decoration:underline;
-}
-.home-footer
-{
+.underline-footer,
+.home-footer{
     width:70px;
     height:2px;
     background-color:#ff5e14;
     border-radius:2px;
     margin-top:10px;
 }
-#contact
-{
- height: 650px;
- background-image: url('../images/college7.jpg');
- background-size: cover;
-}
-#contact .col-sm-12
-{
-display: flex;
-align-items: top;
-justify-content: top;
-color: black;
-font-size:larger;
-backdrop-filter:blur(3px);
-}
-#login
-{
- height:1000px;
- width:100%;
- background-size:cover;
- background-image:url('../images/edu.jpg')   
-}
-#login .col-sm-4
-{
-display: flex;
-align-items:center;
-justify-content:center;
-color:rgb(70, 70, 102);
-font-size:larger;
-backdrop-filter:blur(30px);
-}
-#block
-{
- min-height:580px;
- width:100%;
- background-color:white;  
- border-radius:50px; 
-max-width:900px;
-margin:auto;
+
+footer a:hover,
+.footer-link li a:hover{
+    color:#ffd9c7 !important;
+    text-decoration:underline;
 }
 
-#card
-{
-height:200px;
-width:100%;
+/* ---------- Contact ---------- */
+#contact{
+    min-height:650px;
+    background-image:url('../images/college7.jpg');
+    background-size:cover;
+    background-position:center;
 }
-
-#card1
-{
-    width:330px;
-    height: 200px;;
-    background-color: #df8b1e;
-}
-#card2
-{
-    width:330px;
-    height: 200px;;
-    background-color: #1c507a;
-}
-#card3
-{
-    width:330px;
-    height: 200px;;
-    background-color: #e09d0d;
-}
-#card4
-{
-    width:330px;
-    height: 200px;;
-    background-color: #1c507a;
-}
-#about
-{
-min-height:700px;
- width:100%;
- background-size:cover;
- background-image:url('../images/news/college5.jpg')   
-}
-#about .col-sm-12
-{
+#contact .col-12{
     display:flex;
-    align-items: right;
-    color:white;
-    backdrop-filter :blur (30px);
-    text-align: center;
-}
-#register
-{
- min-height:900px;
- width:100%px;
- background-size:cover;
- background-image:url('../images/college5.jpg')   
+    align-items:flex-start;
+    justify-content:flex-start;
+    color:black;
+    font-size:larger;
+    backdrop-filter:blur(3px);
 }
 
-.card{
-width:100%;
-
-
+/* ---------- Login ---------- */
+#login{
+    min-height:1000px;
+    width:100%;
+    background-size:cover;
+    background-position:center;
+    background-image:url('../images/edu.jpg');
 }
-.news-card:hover img
-{
+#block{
+    min-height:580px;
+    width:100%;
+    background-color:white;
+    border-radius:50px;
+    max-width:900px;
+    margin:auto;
+}
+.auth-img{ width:100%; height:100%; object-fit:cover; }
 
-transform :scale(1.2);
+/* ---------- About ---------- */
+#about{
+    min-height:700px;
+    width:100%;
+    background-size:cover;
+    background-position:center;
+    background-image:url('../images/news/college5.jpg');
 }
-.news-card div
-{
- overflow: hidden;
- border-radius: 5px 5px 0 0;
- 
+#card1,#card2,#card3,#card4{
+    width:100%;
+    max-width:330px;
+    min-height:200px;
+    height:100%;
 }
-.news-card div img
-{
-    transition:.5s ease;
+#card1{ background-color:#df8b1e; }
+#card2{ background-color:#1c507a; }
+#card3{ background-color:#e09d0d; }
+#card4{ background-color:#1c507a; }
+
+/* ---------- Register ---------- */
+#register{
+    min-height:900px;
+    width:100%;
+    background-size:cover;
+    background-position:center;
+    background-image:url('../images/college5.jpg');
+}
+
+/* ---------- Cards ---------- */
+.card{ width:100%; }
+.news-card:hover img{ transform:scale(1.2); }
+.news-card > div:first-child{ overflow:hidden; border-radius:5px 5px 0 0; }
+.news-card div img{ transition:.5s ease; }
+
+.map-frame{ width:100%; height:300px; border:0; }
+
+@media (max-width:767.98px){
+    #contact{ min-height:300px; }
+    #login{ min-height:100vh; }
+    #about{ min-height:400px; }
+    #register{ min-height:100vh; }
+    #block{ border-radius:24px; min-height:auto; }
+    .map-frame{ height:250px; }
+}
+/* responsive website*/
+/* ===== responsive.css — style.css ke BAAD load hota hai ===== */
+/* Sab kuch yahin se edit karo: naye size/spacing ke liye bas variables badlo */
+
+:root {
+  /* --- Size --- */
+  --logo-h: 100px;          /* IIMM logo height */
+  --g20-h: 85px;            /* G20 logo height */
+  --card-img-h: 200px;      /* news/study/achievement card images */
+  --advisor-img-max-h: 600px;
+  --advisor-img-max-w: 420px;
+
+  /* --- Text --- */
+  --fs-body: 1rem;
+  --fs-h1: clamp(1.5rem, 4vw, 2.5rem);
+  --fs-h2: clamp(1.25rem, 3vw, 2rem);
+  --fs-h4: clamp(1.05rem, 2.2vw, 1.5rem);
+
+  /* --- Look --- */
+  --card-radius: 0.5rem;
+  --section-gap: 2.5rem;
+
+  /* Brand color badalna ho to niche ki line uncomment karo (R, G, B) */
+  /* --bs-primary-rgb: 13, 110, 253; */
+}
+
+body { font-size: var(--fs-body); overflow-x: hidden; }
+img { max-width: 100%; }
+h1 { font-size: var(--fs-h1); }
+h2 { font-size: var(--fs-h2); }
+h4 { font-size: var(--fs-h4); }
+
+.text-justify { text-align: justify; }
+
+/* Header */
+.logo-img { height: var(--logo-h); width: auto; max-width: 100%; }
+.logo-img--sm { height: var(--g20-h); }
+
+/* Cards & images */
+.card { border-radius: var(--card-radius); overflow: hidden; }
+.card-img-fixed { height: var(--card-img-h); width: 100%; object-fit: cover; }
+.advisor-img {
+  width: 100%; height: auto;
+  max-width: var(--advisor-img-max-w);
+  max-height: var(--advisor-img-max-h);
+  object-fit: cover;
+}
+.carousel-item img { object-fit: cover; }
+
+/* Announcement */
+.announce-marquee img { height: 28px; }
+
+/* Footer */
+footer ul { padding-left: 0; }
+footer .list-unstyled { flex-wrap: wrap; }
+
+/* ---------- Tablet & niche (< 992px) ---------- */
+@media (max-width: 991.98px) {
+  :root { --logo-h: 80px; --g20-h: 70px; --card-img-h: 180px; }
+  .nav-sep { display: none; }            /* menu stack hone par "|" hata do */
+  .navbar-nav .nav-link { padding: 0.6rem 1rem; }
+}
+
+/* ---------- Mobile (< 768px) ---------- */
+@media (max-width: 767.98px) {
+  :root { --logo-h: 64px; --g20-h: 56px; --card-img-h: 170px; --fs-body: 0.95rem; }
+  .carousel-item img { min-height: 160px; }
+  .text-justify { text-align: left; }
+  footer .col-12 { margin-bottom: 1rem; }
+  footer .list-unstyled { justify-content: center; }
+  .fa-4x { font-size: 2.5em; }           /* stats icons chhote */
+}
+
+/* Bahut chhoti screen (< 400px) */
+@media (max-width: 399.98px) {
+  :root { --fs-body: 0.9rem; }
 }
